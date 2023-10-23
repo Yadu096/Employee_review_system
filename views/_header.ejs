@@ -1,0 +1,24 @@
+
+<link rel="stylesheet" href="/css/header.css">
+<header>
+    <div class="flex-container">
+        <div>
+            <a href="/"> Home </a>
+        </div>
+        <div>
+            <% if(locals.user){%>
+        
+                <a href="/"> <%= user.name %> </a>
+        
+                <a href="/emp/clear-session"> Sign Out</a>
+        
+                <%}else{%>
+                    
+                    <a href="/emp/sign-in"> Sign In </a>
+                    
+                    <a href="/emp/registration"> Registration </a>
+        
+            <%} %>
+        </div>
+    </div>
+</header>
